@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maps'nWeather</title>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key={key}&callback=initMap&libraries=places&v=weekly"
+        defer></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+
+
+    <div id="floating-panel">
+        <div id="buscar-rota">
+            <h3>Buscar Rota</h3>
+            <input class="inputs" id="start" placeholder="Início" type="text">
+            <input class="inputs" id="end" placeholder="Fim" type="text">
+            <input id="submitDirection" type="button" value="Buscar" />
+        </div>
+        <div id="right-panel">
+            <div id="fecharRota"><span>X</span></div>
+        </div>
+    </div>
+    
+    <div id="draggable-box">
+        <div id="weather">
+            <div id="description"></div>
+            <div id="image-temperature">
+                <h1 id="temp"></h1>
+                <img id="img-weather" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+            </div>
+            <div id="location"></div>
+        </div>
+    </div>
+    
+    <div id="map-container">
+        <input id="pac-input" class="controls" type="text" placeholder="Buscar" />
+        <div id="map"> </div>
+    </div>
+</body>
+
+</html>

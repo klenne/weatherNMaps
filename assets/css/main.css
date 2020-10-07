@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap%27');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#map {
+    height: 100%;
+}
+
+#map-container {
+    height: 100vh;
+    width: 74vw;
+    position: relative;
+}
+
+#right-panel {
+    overflow: auto;
+    max-width: 50vw;
+    padding-left: 5%;
+    display: none;
+}
+
+#buscar-rota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.inputs {
+    margin-top: 2%;
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 3%;
+    height: 20px;
+    border-color: transparent;
+}
+
+.inputs, #submitDirection input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#submitDirection {
+    margin-top: 2%;
+    border-radius: 15px;
+    padding-left: 10px;
+    width: 100%;
+    border-color: transparent;
+}
+
+#buscar-rota h3 {
+    text-align: center;
+    color: white;
+}
+
+#pac-input {
+    margin: 1%;
+    width: 50%;
+    height: 6%;
+    border-radius: 100px;
+    padding-left: 10px;
+    border-color: transparent;
+}
+
+#pac-input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#floating-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 26vw;
+    height: 100vh;
+}
+
+#fecharRota {
+    font-family: 'Baloo Tammudu 2', cursive;
+    cursor: pointer;
+}
+
+#draggable-box {
+    font-family: 'Baloo Tammudu 2', cursive;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    background-color:rgba(255, 255,255, .9);
+    width: 200px;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+   
+}
+
+
+#description,#location{
+
+    text-align: center;
+    font-weight: bold;
+}
+
+#image-temperature{
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#img-weather{
+
+    width: 50px;
+    height: 50px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 110, 209);
+    background: linear-gradient(90deg, rgba(0, 110, 209, 1) 0%, rgba(40, 148, 217, 1) 35%, rgba(10, 207, 247, 1) 100%);
+}
+
+html, body {
+    overflow: hidden;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    body {
+        flex-direction: column-reverse;
+    }
+
+    #map-container{
+        height: 50vh;
+        width: 100vw;
+    }
+
+    #floating-panel{
+        height: 50vh;
+        width: 100vw;
+    }
+
+    #pac-input{
+        width: 70%;
+        height: 12%;
+        border-radius: 100px;
+        font-size: 40px;
+    }
+
+    .inputs{
+        height: 60px;
+        border-radius: 100px;
+        font-size: 40px;
+    }
+
+    #submitDirection{
+        width: 30vw;
+        height: 10vw;
+        border-radius: 100px;
+        font-size: 40px;
+    }
+
+    #buscar-rota>h3{
+        font-size: 50px;
+    }
+
+    #right-panel{
+        padding-left: 0;
+        padding-top: 10px;
+        max-width: 100%;
+        font-size: 25px;
+
+    }
+   
+}
